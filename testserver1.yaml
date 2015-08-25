@@ -1,0 +1,15 @@
+heat_template_version: 2014-10-16
+
+parameters:
+  key_name:
+    type: string
+    description: Name of a KeyPair
+
+resources:
+  server:
+    type: OS::Nova::Server
+    properties:
+      name: TestServer1  
+      key_name: {get_param: key_name}
+      flavor: m1.compact
+      image: Centos 6.5 x64 (pre installed node.js stack)
