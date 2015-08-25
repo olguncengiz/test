@@ -13,5 +13,5 @@ resources:
 
 outputs:
   ip_addr:
-    description: IP Address of the load-balanced server.
+    description: Server's IP address
     value: { get_attr: [my_server, server_ip] }
