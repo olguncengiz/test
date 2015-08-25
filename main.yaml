@@ -1,0 +1,7 @@
+heat_template_version: 2014-10-16
+
+resources:
+  my_server:
+    type: https://raw.githubusercontent.com/olguncengiz/test/master/testserver1.yaml
+    properties:
+      keyname: my_key
