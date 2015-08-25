@@ -1,7 +1,7 @@
 heat_template_version: 2014-10-16
 
 parameters:
-  key_name:
+  keyname:
     type: string
     description: Name of a KeyPair
 
@@ -10,6 +10,7 @@ resources:
     type: OS::Nova::Server
     properties:
       name: TestServer1  
-      key_name: {get_param: key_name}
+      key_name: {get_param: keyname}
       flavor: m1.compact
+      network: net04
       image: Centos 6.5 x64 (pre installed node.js stack)
