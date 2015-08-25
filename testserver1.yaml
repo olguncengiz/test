@@ -12,5 +12,5 @@ resources:
       name: TestServer1  
       key_name: {get_param: keyname}
       flavor: m1.compact
-      network: net04
+      networks: [{network: net04 }]
       image: Centos 6.5 x64 (pre installed node.js stack)
