@@ -10,3 +10,8 @@ resources:
     type: https://raw.githubusercontent.com/olguncengiz/test/master/testserver1.yaml
     properties:
       keyname: {get_param: keypair}
+
+outputs:
+  ip_addr:
+    description: IP Address of the load-balanced server.
+    value: { get_attr: [my_server, server_ip] }
